@@ -6,16 +6,16 @@ import PWARegister from "@modules/common/components/pwa-register"
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
   title: {
-    default: "MSWYSL",
+    default: "mswysl-logo.png",
     template: "%s | MSWYSL",
   },
   description:
-    "Dark PWA commerce for physical goods, digital drops, and premium gated releases.",
+    "TRUE Underground Tees. Highest Quality Prints; All on ShakaWear",
   manifest: "/manifest.webmanifest",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "MSWYSL",
+    title: "mswysl-logo.png",
   },
 }
 

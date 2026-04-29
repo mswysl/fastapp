@@ -1,10 +1,10 @@
 export function GET() {
   return new Response(
     JSON.stringify({
-      name: "MSWYSL",
-      short_name: "MSWYSL",
+      name: "mswysl-logo.png",
+      short_name: "mswysl-sigil.png",
       description:
-        "Dark PWA commerce for physical goods, digital drops, and premium gated releases.",
+        "TRUE Underground Tees.",
       start_url: "/",
       scope: "/",
       display: "standalone",
@@ -12,7 +12,7 @@ export function GET() {
       theme_color: "#06080f",
       icons: [
         {
-          src: "/favicon.ico",
+          src: "/mswysl-sigil.png",
           sizes: "48x48",
           type: "image/x-icon",
         },

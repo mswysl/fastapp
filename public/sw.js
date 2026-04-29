@@ -1,5 +1,5 @@
 const CACHE_NAME = "mswysl-storefront-v1"
-const APP_SHELL = ["/", "/api/healthcheck", "/favicon.ico"]
+const APP_SHELL = ["/", "/api/healthcheck", "/mswysl-sigil.png"]
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
