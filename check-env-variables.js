@@ -3,7 +3,7 @@ const c = require("ansi-colors")
 const requiredEnvs = [
   {
     key: "NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY",
-    // TODO: we need a good doc to point this to
+    value: "pk_744ce1932c862ba9daa07512ed61dcb968f94a3da912554dae24cf0bf3df55cf",
     description:
       "Learn how to create a publishable key: https://docs.medusajs.com/v2/resources/storefront-development/publishable-api-keys",
   },
