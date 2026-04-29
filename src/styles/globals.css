@@ -2,6 +2,34 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  :root {
+    --mswysl-void: #06080f;
+    --mswysl-line: rgba(255, 255, 255, 0.14);
+    --mswysl-muted: #a9b0c3;
+    --mswysl-acid: #82ffd6;
+    --mswysl-pink: #ff3d81;
+  }
+
+  html {
+    background: var(--mswysl-void);
+  }
+
+  body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(130, 255, 214, 0.08), transparent 28%),
+      radial-gradient(circle at 80% 0%, rgba(255, 61, 129, 0.09), transparent 24%),
+      var(--mswysl-void);
+    color: #f8fafc;
+  }
+
+  ::selection {
+    background: var(--mswysl-acid);
+    color: #05060a;
+  }
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -50,6 +78,38 @@
 }
 
 @layer components {
+  .bg-mswysl-void {
+    background-color: var(--mswysl-void);
+  }
+
+  .text-mswysl-muted {
+    color: var(--mswysl-muted);
+  }
+
+  .text-mswysl-acid {
+    color: var(--mswysl-acid);
+  }
+
+  .text-mswysl-pink {
+    color: var(--mswysl-pink);
+  }
+
+  .border-mswysl-line {
+    border-color: var(--mswysl-line);
+  }
+
+  .border-mswysl-acid {
+    border-color: var(--mswysl-acid);
+  }
+
+  .border-mswysl-pink {
+    border-color: var(--mswysl-pink);
+  }
+
+  .bg-mswysl-acid {
+    background-color: var(--mswysl-acid);
+  }
+
   .content-container {
     @apply max-w-[1440px] w-full mx-auto px-6;
   }
