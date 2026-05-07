@@ -1,35 +1,33 @@
+import Image from "next/image"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
+import RandomProductSelector from "../random-product-selector"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[calc(100vh-64px)] overflow-hidden border-b border-mswysl-line bg-mswysl-void text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,61,129,0.22),transparent_26%),radial-gradient(circle_at_76%_18%,rgba(130,255,214,0.18),transparent_30%),linear-gradient(145deg,#06080f_0%,#12111d_54%,#06080f_100%)]" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-mswysl-void to-transparent" />
-      <div className="content-container relative z-10 flex min-h-[calc(100vh-64px)] flex-col justify-center py-20">
-        <div className="max-w-4xl">
-          <p className="text-small-semi uppercase tracking-[0.28em] text-mswysl-acid">
-            Physical goods / digital drops / premium access
-          </p>
-          <h1 className="mt-5 max-w-4xl text-[54px] font-normal leading-[0.92] text-white small:text-[88px] large:text-[112px]">
-            MSWYSL
+    <section className="relative min-h-[calc(100vh-64px)] overflow-hidden bg-black text-white">
+      <Image
+        src="/images/mswysl-logo.png"
+        alt="Hero collage"
+        fill
+        priority
+        className="object-cover opacity-35"
+      />
+      <div className="relative z-10 flex min-h-[calc(100vh-64px)] flex-col justify-between py-10">
+        <div className="content-container">
+          <h1 className="text-[110px] leading-[0.86] font-black uppercase text-white drop-shadow-[0_0_20px_rgba(0,0,0,0.8)] small:text-[180px]">
+            True
+            <br />
+            Underground
+            <br />
+            Tees
           </h1>
-          <p className="mt-6 max-w-2xl text-large-regular text-mswysl-muted">
-            A dark commerce platform for sigil-led product discovery, glowing
-            modular surfaces, secure downloads, and subscription-gated releases.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <LocalizedClientLink
-              href="/store"
-              className="border border-mswysl-acid bg-mswysl-acid px-5 py-3 text-small-semi uppercase text-black transition hover:bg-white hover:text-black"
-            >
-              Enter Store
-            </LocalizedClientLink>
-            <LocalizedClientLink
-              href="/account"
-              className="border border-mswysl-line bg-white/5 px-5 py-3 text-small-semi uppercase text-white transition hover:border-mswysl-pink hover:text-mswysl-pink"
-            >
-              Premium Login
-            </LocalizedClientLink>
+        </div>
+        <div className="content-container space-y-6 pb-8">
+          <p className="text-3xl font-black uppercase text-mswysl-pink">New shirts every three days</p>
+          <div className="flex flex-wrap gap-3">
+            <LocalizedClientLink href="/store" className="border border-white px-5 py-3 text-small-semi uppercase">Shop now</LocalizedClientLink>
+            <LocalizedClientLink href="/account" className="border border-mswysl-pink px-5 py-3 text-small-semi uppercase text-mswysl-pink">Customer Account</LocalizedClientLink>
+            <RandomProductSelector />
           </div>
         </div>
       </div>
